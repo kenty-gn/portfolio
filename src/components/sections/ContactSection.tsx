@@ -115,7 +115,7 @@ export function ContactSection() {
                             asChild
                         >
                             <a
-                                href="https://twitter.com/"
+                                href="https://x.com/tea_programer?s=21&t=HZ9W7hnhD8Wfzo2lg9AaPg"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

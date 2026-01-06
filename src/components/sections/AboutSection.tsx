@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { User, MapPin, Briefcase } from "lucide-react";
+import { MapPin, Briefcase } from "lucide-react";
 
 export function AboutSection() {
     return (
@@ -28,10 +29,17 @@ export function AboutSection() {
                     className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-border/50 rounded-3xl p-8 sm:p-12"
                 >
                     <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
-                        {/* Profile Image Placeholder */}
+                        {/* Profile Image */}
                         <div className="flex-shrink-0">
-                            <div className="w-40 h-40 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-xl shadow-blue-500/20">
-                                <User className="w-20 h-20 text-white/80" />
+                            <div className="w-40 h-40 rounded-2xl overflow-hidden shadow-xl shadow-blue-500/20 ring-2 ring-blue-500/30">
+                                <Image
+                                    src="/profile.jpg"
+                                    alt="藤岡 賢利"
+                                    width={160}
+                                    height={160}
+                                    className="w-full h-full object-cover"
+                                    priority
+                                />
                             </div>
                         </div>
 
