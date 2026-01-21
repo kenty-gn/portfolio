@@ -19,8 +19,9 @@ const projects: Project[] = [
     {
         id: "1",
         title: "家計簿アプリ",
-        description: "Next.js 14とSupabaseを使用した家計管理アプリ。収支の可視化、カテゴリ分析、月次レポート機能を実装予定。",
+        description: "Next.js 14とSupabaseを使用した家計管理アプリ。収支の可視化、カテゴリ分析、月次レポート機能を搭載。現在開発中のプロジェクトです。",
         tags: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+        liveUrl: "https://portfolio-psi-one-gp7apao4np.vercel.app/",
         comingSoon: true,
     },
     {
@@ -135,7 +136,7 @@ export function WorksSection() {
                                         >
                                             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                                 <ExternalLink className="w-4 h-4 mr-2" />
-                                                Live
+                                                {project.comingSoon ? "開発中" : "Live"}
                                             </a>
                                         </Button>
                                     )}
