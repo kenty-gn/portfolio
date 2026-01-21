@@ -8,7 +8,7 @@
 
 #### 変更内容
 - 家計簿アプリにVercelデプロイURLを追加
-  - URL: https://portfolio-psi-one-gp7apao4np.vercel.app/
+  - URL: https://smart-income-allocator.vercel.app/
 - 説明文を更新し、「開発中」であることを明記
 - ボタンのラベルを動的に変更
   - `comingSoon`かつ`liveUrl`がある場合は「開発中」と表示
