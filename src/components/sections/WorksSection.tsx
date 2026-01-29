@@ -38,6 +38,18 @@ const projects: Project[] = [
         tags: ["Vue.js", "Firebase", "TypeScript"],
         comingSoon: true,
     },
+    {
+        id: "4",
+        title: "LP制作（1日納品）",
+        description: "v0とAIツールを活用し、クライアント要望のLPを1日でスピード納品。デザイン提案から実装、レスポンシブ対応まで一貫して対応。迅速な納期とモダンなデザインが評価されました。",
+        tags: ["v0", "Next.js", "Tailwind CSS", "AI活用"],
+    },
+    {
+        id: "5",
+        title: "飲食店SaaSモダナイゼーション",
+        description: "レガシーな飲食店向け店舗管理システムのモダナイゼーション開発。Rails APIをOpenAPI仕様で再設計し、フロントエンドをNext.jsで刷新。保守性と開発体験を大幅に向上させました。",
+        tags: ["Ruby on Rails", "OpenAPI", "Next.js", "TypeScript"],
+    },
 ];
 
 const containerVariants = {
