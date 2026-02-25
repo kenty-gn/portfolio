@@ -8,13 +8,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "藤岡 賢利 | Frontend Engineer Portfolio",
-  description: "堅実な設計思考 × モダンな実装力。あなたのWeb開発を加速させます。業務系システム開発とモダンWeb技術の両方に精通したエンジニアのポートフォリオサイト。",
-  keywords: ["フロントエンド", "Next.js", "TypeScript", "Web開発", "フリーランス"],
-  authors: [{ name: "藤岡 賢利" }],
+  title: "Kenty | AI活用開発エンジニア",
+  description: "AI × 爆速開発で、アイデアを形に。Claude Code活用のバイブコーディングで、企画から設計・実装・ストア公開まで一気通貫対応するエンジニアのポートフォリオ。",
+  keywords: ["AI活用開発", "バイブコーディング", "Claude Code", "Expo", "Next.js", "TypeScript", "フリーランス"],
+  authors: [{ name: "Kenty" }],
   openGraph: {
-    title: "藤岡 賢利 | Frontend Engineer Portfolio",
-    description: "堅実な設計思考 × モダンな実装力。あなたのWeb開発を加速させます。",
+    title: "Kenty | AI活用開発エンジニア",
+    description: "AI × 爆速開発で、アイデアを形に。企画から設計・実装・ストア公開まで一気通貫対応。",
     type: "website",
   },
 };
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className="dark scroll-smooth">
+    <html lang="ja" className="scroll-smooth">
       <body
         className={`${inter.variable} font-sans antialiased bg-background text-foreground`}
       >

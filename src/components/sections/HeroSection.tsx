@@ -8,36 +8,10 @@ export function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-950/20 via-background to-background" />
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-blue-50" />
 
-            {/* Animated grid background */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
-
-            {/* Floating orbs */}
-            <motion.div
-                className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
-                animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.3, 0.5, 0.3],
-                }}
-                transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                }}
-            />
-            <motion.div
-                className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
-                animate={{
-                    scale: [1.2, 1, 1.2],
-                    opacity: [0.3, 0.5, 0.3],
-                }}
-                transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                }}
-            />
+            {/* Subtle grid */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.04)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
             <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div
@@ -46,9 +20,9 @@ export function HeroSection() {
                     transition={{ duration: 0.6 }}
                     className="mb-6"
                 >
-                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-600 text-sm font-medium">
                         <Sparkles className="w-4 h-4" />
-                        Frontend Engineer
+                        AI-Powered Full-Stack Engineer
                     </span>
                 </motion.div>
 
@@ -58,13 +32,12 @@ export function HeroSection() {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
                 >
-                    <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-                        堅実な設計思考
+                    <span className="bg-gradient-to-r from-gray-900 via-indigo-900 to-indigo-700 bg-clip-text text-transparent">
+                        AI × 爆速開発で、
                     </span>
-                    <span className="text-blue-400"> × </span>
                     <br className="hidden sm:block" />
-                    <span className="bg-gradient-to-r from-blue-200 via-blue-100 to-white bg-clip-text text-transparent">
-                        モダンな実装力。
+                    <span className="bg-gradient-to-r from-indigo-700 via-indigo-900 to-gray-900 bg-clip-text text-transparent">
+                        アイデアを形に。
                     </span>
                 </motion.h1>
 
@@ -72,11 +45,11 @@ export function HeroSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
+                    className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-10"
                 >
-                    あなたのWeb開発を加速させます。
+                    Claude Codeを活用したバイブコーディングで、
                     <br className="hidden sm:block" />
-                    業務システムで培った設計力と、最新技術の実装力を兼ね備えたエンジニアです。
+                    企画から設計・実装・ストア公開まで一気通貫対応。
                 </motion.p>
 
                 <motion.div
@@ -87,7 +60,7 @@ export function HeroSection() {
                 >
                     <Button
                         size="lg"
-                        className="group bg-blue-600 hover:bg-blue-500 text-white px-8 py-6 text-lg rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-blue-500/40 hover:scale-105"
+                        className="group bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-6 text-lg rounded-full shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:shadow-indigo-500/40 hover:scale-105"
                         onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                     >
                         お問い合わせ
@@ -96,7 +69,7 @@ export function HeroSection() {
                     <Button
                         size="lg"
                         variant="outline"
-                        className="px-8 py-6 text-lg rounded-full border-border/50 hover:bg-accent/50 transition-all duration-300"
+                        className="px-8 py-6 text-lg rounded-full border-gray-300 text-gray-700 hover:bg-gray-50 transition-all duration-300"
                         onClick={() => document.getElementById("works")?.scrollIntoView({ behavior: "smooth" })}
                     >
                         <Code2 className="mr-2 w-5 h-5" />
@@ -114,9 +87,9 @@ export function HeroSection() {
                     <motion.div
                         animate={{ y: [0, 8, 0] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                        className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2"
+                        className="w-6 h-10 rounded-full border-2 border-gray-300 flex justify-center pt-2"
                     >
-                        <motion.div className="w-1.5 h-1.5 bg-muted-foreground/50 rounded-full" />
+                        <motion.div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
                     </motion.div>
                 </motion.div>
             </div>

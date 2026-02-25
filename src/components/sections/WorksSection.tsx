@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { ExternalLink, Github, Smartphone, BookOpen, FileText, Globe, Utensils } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Project {
@@ -9,46 +9,55 @@ interface Project {
     title: string;
     description: string;
     tags: string[];
-    image?: string;
+    icon: React.ElementType;
+    iconColor: string;
     liveUrl?: string;
     githubUrl?: string;
-    comingSoon?: boolean;
 }
 
 const projects: Project[] = [
     {
         id: "1",
-        title: "家計簿アプリ",
-        description: "Next.js 14とSupabaseを使用した家計管理アプリ。収支の可視化、カテゴリ分析、月次レポート機能を搭載。現在開発中のプロジェクトです。",
-        tags: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
-        liveUrl: "https://smart-income-allocator.vercel.app/",
-        comingSoon: true,
+        title: "ふくログ",
+        description: "副業収入を簡単に記録・管理できるiOSアプリ。Expo + Supabase + RevenueCatで構築し、Claude Codeを活用して2日でMVP完成。App Storeで公開中。",
+        tags: ["Expo", "Supabase", "RevenueCat", "App Store公開"],
+        icon: Smartphone,
+        iconColor: "text-emerald-500",
+        liveUrl: "https://apps.apple.com/app/id6743806956",
     },
     {
         id: "2",
-        title: "ポートフォリオサイト",
-        description: "このサイトです。Next.js 14 App Router、Framer Motion、shadcn/uiを使用したモダンなデザイン。",
-        tags: ["Next.js", "TypeScript", "Framer Motion", "shadcn/ui"],
-        liveUrl: "/",
+        title: "Zenn技術本",
+        description: "「Claude Codeで2日でiOSアプリを作ってApp Storeに公開した話」全9章・980円で有料販売中。AI活用開発の実践ノウハウを体系的にまとめた一冊。",
+        tags: ["Zenn", "技術書", "AI活用開発", "有料販売"],
+        icon: BookOpen,
+        iconColor: "text-blue-500",
+        liveUrl: "https://zenn.dev/kenty/books/and-and-and-and-and",
     },
     {
         id: "3",
-        title: "タスク管理ツール",
-        description: "Vue.jsとFirebaseを使用したリアルタイムタスク管理ツール。ドラッグ&ドロップでのタスク移動機能付き。",
-        tags: ["Vue.js", "Firebase", "TypeScript"],
-        comingSoon: true,
+        title: "Zenn記事",
+        description: "Claude Codeで2日でiOSアプリを完成させた開発記録。バイブコーディングの実践例として多くの反響を獲得。",
+        tags: ["Zenn", "Claude Code", "開発記録"],
+        icon: FileText,
+        iconColor: "text-indigo-500",
+        liveUrl: "https://zenn.dev/kenty/articles/and-and-and-and-and",
     },
     {
         id: "4",
-        title: "LP制作（1日納品）",
-        description: "v0とAIツールを活用し、クライアント要望のLPを1日でスピード納品。デザイン提案から実装、レスポンシブ対応まで一貫して対応。迅速な納期とモダンなデザインが評価されました。",
+        title: "受託LP制作",
+        description: "v0とAIツールを活用し、クライアント要望のLPを1日でスピード納品。デザイン提案から実装、レスポンシブ対応まで一貫して対応。",
         tags: ["v0", "Next.js", "Tailwind CSS", "AI活用"],
+        icon: Globe,
+        iconColor: "text-violet-500",
     },
     {
         id: "5",
         title: "飲食店SaaSモダナイゼーション",
-        description: "レガシーな飲食店向け店舗管理システムのモダナイゼーション開発。Rails APIをOpenAPI仕様で再設計し、フロントエンドをNext.jsで刷新。保守性と開発体験を大幅に向上させました。",
+        description: "レガシーな飲食店向け店舗管理システムのモダナイゼーション。Rails APIをOpenAPI仕様で再設計し、フロントエンドをNext.jsで刷新。",
         tags: ["Ruby on Rails", "OpenAPI", "Next.js", "TypeScript"],
+        icon: Utensils,
+        iconColor: "text-amber-500",
     },
 ];
 
@@ -73,7 +82,7 @@ const itemVariants = {
 
 export function WorksSection() {
     return (
-        <section id="works" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-blue-950/5 to-transparent">
+        <section id="works" className="py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -82,13 +91,12 @@ export function WorksSection() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
-                        <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">
                             Works
                         </span>
                     </h2>
-                    <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-                        個人開発プロジェクトの一覧です。
-                        実務経験を活かしながら、モダンな技術スタックでの開発に取り組んでいます。
+                    <p className="text-gray-500 text-center mb-12 max-w-2xl mx-auto">
+                        AI活用開発を中心に、個人開発から受託案件まで幅広く手がけています。
                     </p>
                 </motion.div>
 
@@ -103,25 +111,20 @@ export function WorksSection() {
                         <motion.div
                             key={project.id}
                             variants={itemVariants}
-                            className="group relative bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-border/50 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
+                            className="group relative bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-indigo-200 hover:shadow-md transition-all duration-300"
                         >
-                            {/* Project Image / Placeholder */}
-                            <div className="relative h-48 bg-gradient-to-br from-blue-900/20 to-indigo-900/20 flex items-center justify-center overflow-hidden">
-                                <Folder className="w-16 h-16 text-blue-500/30 group-hover:scale-110 transition-transform duration-300" />
-                                {project.comingSoon && (
-                                    <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-medium">
-                                        Coming Soon
-                                    </div>
-                                )}
-                                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+                            {/* Project Icon Area */}
+                            <div className="relative h-44 bg-gradient-to-br from-gray-50 to-indigo-50/50 flex items-center justify-center overflow-hidden">
+                                <project.icon className={`w-16 h-16 ${project.iconColor} opacity-60 group-hover:scale-110 transition-transform duration-300`} />
+                                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                             </div>
 
                             {/* Content */}
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">
+                                <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-indigo-600 transition-colors">
                                     {project.title}
                                 </h3>
-                                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                                <p className="text-gray-500 text-sm mb-4 line-clamp-3">
                                     {project.description}
                                 </p>
 
@@ -130,7 +133,7 @@ export function WorksSection() {
                                     {project.tags.map((tag) => (
                                         <span
                                             key={tag}
-                                            className="px-2 py-1 text-xs rounded-md bg-blue-500/10 text-blue-400"
+                                            className="px-2 py-1 text-xs rounded-md bg-indigo-50 text-indigo-600"
                                         >
                                             {tag}
                                         </span>
@@ -143,12 +146,12 @@ export function WorksSection() {
                                         <Button
                                             variant="outline"
                                             size="sm"
-                                            className="flex-1 rounded-lg"
+                                            className="flex-1 rounded-lg border-gray-200 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200"
                                             asChild
                                         >
                                             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                                 <ExternalLink className="w-4 h-4 mr-2" />
-                                                {project.comingSoon ? "開発中" : "Live"}
+                                                View
                                             </a>
                                         </Button>
                                     )}
@@ -156,23 +159,13 @@ export function WorksSection() {
                                         <Button
                                             variant="outline"
                                             size="sm"
-                                            className="flex-1 rounded-lg"
+                                            className="flex-1 rounded-lg border-gray-200 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200"
                                             asChild
                                         >
                                             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                                                 <Github className="w-4 h-4 mr-2" />
                                                 Code
                                             </a>
-                                        </Button>
-                                    )}
-                                    {project.comingSoon && !project.liveUrl && !project.githubUrl && (
-                                        <Button
-                                            variant="outline"
-                                            size="sm"
-                                            className="flex-1 rounded-lg opacity-50 cursor-not-allowed"
-                                            disabled
-                                        >
-                                            準備中
                                         </Button>
                                     )}
                                 </div>

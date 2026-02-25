@@ -37,7 +37,7 @@ export function Header() {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                        ? "bg-background/80 backdrop-blur-lg border-b border-border/50 shadow-lg shadow-black/5"
+                        ? "bg-white/80 backdrop-blur-lg border-b border-gray-200 shadow-sm"
                         : "bg-transparent"
                     }`}
             >
@@ -46,14 +46,14 @@ export function Header() {
                         {/* Logo */}
                         <a
                             href="#"
-                            className="flex items-center gap-2 text-lg font-bold hover:text-blue-400 transition-colors"
+                            className="flex items-center gap-2 text-lg font-bold text-gray-900 hover:text-indigo-600 transition-colors"
                             onClick={(e) => {
                                 e.preventDefault();
                                 window.scrollTo({ top: 0, behavior: "smooth" });
                             }}
                         >
-                            <Code2 className="w-6 h-6 text-blue-500" />
-                            <span>K.Fujioka</span>
+                            <Code2 className="w-6 h-6 text-indigo-600" />
+                            <span>Kenty</span>
                         </a>
 
                         {/* Desktop Navigation */}
@@ -62,14 +62,14 @@ export function Header() {
                                 <button
                                     key={item.label}
                                     onClick={() => handleNavClick(item.href)}
-                                    className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-accent/50"
+                                    className="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors rounded-lg hover:bg-gray-100"
                                 >
                                     {item.label}
                                 </button>
                             ))}
                             <Button
                                 size="sm"
-                                className="ml-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full px-6"
+                                className="ml-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full px-6"
                                 onClick={() => handleNavClick("#contact")}
                             >
                                 お問い合わせ
@@ -78,7 +78,7 @@ export function Header() {
 
                         {/* Mobile Menu Button */}
                         <button
-                            className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+                            className="md:hidden p-2 text-gray-500 hover:text-gray-900 transition-colors"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         >
                             {isMobileMenuOpen ? (
@@ -99,20 +99,20 @@ export function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed inset-x-0 top-16 z-40 md:hidden bg-background/95 backdrop-blur-lg border-b border-border/50"
+                        className="fixed inset-x-0 top-16 z-40 md:hidden bg-white/95 backdrop-blur-lg border-b border-gray-200"
                     >
                         <nav className="flex flex-col p-4 space-y-2">
                             {navItems.map((item) => (
                                 <button
                                     key={item.label}
                                     onClick={() => handleNavClick(item.href)}
-                                    className="px-4 py-3 text-left text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors"
+                                    className="px-4 py-3 text-left text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
                                 >
                                     {item.label}
                                 </button>
                             ))}
                             <Button
-                                className="mt-2 bg-blue-600 hover:bg-blue-500 text-white rounded-full"
+                                className="mt-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full"
                                 onClick={() => handleNavClick("#contact")}
                             >
                                 お問い合わせ
