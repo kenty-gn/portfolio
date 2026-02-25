@@ -228,7 +228,7 @@ export function ContactSection() {
                             asChild
                         >
                             <a
-                                href="https://zenn.dev/kenty"
+                                href="https://zenn.dev/kenty_vibe"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

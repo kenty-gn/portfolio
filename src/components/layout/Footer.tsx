@@ -40,7 +40,7 @@ export function Footer() {
                             <Twitter className="w-5 h-5" />
                         </a>
                         <a
-                            href="https://zenn.dev/kenty"
+                            href="https://zenn.dev/kenty_vibe"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-gray-600 transition-colors"

@@ -32,7 +32,7 @@ const projects: Project[] = [
         tags: ["Zenn", "技術書", "AI活用開発", "有料販売"],
         icon: BookOpen,
         iconColor: "text-blue-500",
-        liveUrl: "https://zenn.dev/kenty/books/and-and-and-and-and",
+        liveUrl: "https://zenn.dev/kenty_vibe/books/and-and-and-and-and",
     },
     {
         id: "3",
@@ -41,7 +41,7 @@ const projects: Project[] = [
         tags: ["Zenn", "Claude Code", "開発記録"],
         icon: FileText,
         iconColor: "text-indigo-500",
-        liveUrl: "https://zenn.dev/kenty/articles/and-and-and-and-and",
+        liveUrl: "https://zenn.dev/kenty_vibe/articles/and-and-and-and-and",
     },
     {
         id: "4",
