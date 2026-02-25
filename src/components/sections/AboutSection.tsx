@@ -33,7 +33,7 @@ export function AboutSection() {
                         <div className="flex-shrink-0">
                             <div className="w-40 h-40 rounded-2xl overflow-hidden shadow-lg ring-2 ring-indigo-100">
                                 <Image
-                                    src="/profile.jpg"
+                                    src="/profile.png"
                                     alt="Kenty"
                                     width={160}
                                     height={160}
