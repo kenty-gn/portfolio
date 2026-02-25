@@ -243,7 +243,7 @@ export function ContactSection() {
                             asChild
                         >
                             <a
-                                href="https://menta.work/user/112893"
+                                href="https://menta.work/user/220479"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
