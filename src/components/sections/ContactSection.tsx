@@ -57,7 +57,7 @@ export function ContactSection() {
     };
 
     return (
-        <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50/50">
+        <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-stone-50/60">
             <div className="max-w-4xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -65,12 +65,10 @@ export function ContactSection() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
-                        <span className="bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">
-                            Contact
-                        </span>
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center text-stone-900">
+                        お問い合わせ
                     </h2>
-                    <p className="text-gray-500 text-center mb-12 max-w-xl mx-auto">
+                    <p className="text-stone-500 text-center mb-12 max-w-xl mx-auto">
                         お仕事のご依頼やご質問など、お気軽にお問い合わせください。
                         できるだけ早くご返信いたします。
                     </p>
@@ -81,7 +79,7 @@ export function ContactSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="bg-white border border-gray-200 rounded-3xl p-8 sm:p-12 shadow-sm"
+                    className="bg-white border border-stone-200 rounded-2xl p-8 sm:p-12 shadow-sm"
                 >
                     {/* Status Message */}
                     {status === "success" && (
@@ -120,7 +118,7 @@ export function ContactSection() {
                                     onChange={handleChange}
                                     required
                                     disabled={status === "loading"}
-                                    className="bg-gray-50 border-gray-200 focus:border-indigo-500 rounded-xl h-12"
+                                    className="bg-gray-50 border-gray-200 focus:border-amber-400 rounded-xl h-12"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -135,7 +133,7 @@ export function ContactSection() {
                                     onChange={handleChange}
                                     required
                                     disabled={status === "loading"}
-                                    className="bg-gray-50 border-gray-200 focus:border-indigo-500 rounded-xl h-12"
+                                    className="bg-gray-50 border-gray-200 focus:border-amber-400 rounded-xl h-12"
                                 />
                             </div>
                         </div>
@@ -152,7 +150,7 @@ export function ContactSection() {
                                 onChange={handleChange}
                                 required
                                 disabled={status === "loading"}
-                                className="bg-gray-50 border-gray-200 focus:border-indigo-500 rounded-xl h-12"
+                                className="bg-gray-50 border-gray-200 focus:border-amber-400 rounded-xl h-12"
                             />
                         </div>
 
@@ -168,7 +166,7 @@ export function ContactSection() {
                                 onChange={handleChange}
                                 required
                                 disabled={status === "loading"}
-                                className="bg-gray-50 border-gray-200 focus:border-indigo-500 rounded-xl resize-none"
+                                className="bg-gray-50 border-gray-200 focus:border-amber-400 rounded-xl resize-none"
                             />
                         </div>
 
@@ -176,7 +174,7 @@ export function ContactSection() {
                             type="submit"
                             size="lg"
                             disabled={status === "loading"}
-                            className="w-full bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl h-14 text-lg shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:shadow-indigo-500/40 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-stone-900 hover:bg-stone-800 text-white rounded-xl h-14 text-lg shadow-md transition-all duration-300 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             {status === "loading" ? (
                                 <>
@@ -209,7 +207,7 @@ export function ContactSection() {
                         <Button
                             variant="outline"
                             size="lg"
-                            className="rounded-xl h-12 border-gray-200 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200"
+                            className="rounded-xl h-12 border-stone-200 text-stone-700 hover:bg-stone-100 hover:text-stone-900 hover:border-stone-300"
                             asChild
                         >
                             <a

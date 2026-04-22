@@ -46,13 +46,13 @@ export function Header() {
                         {/* Logo */}
                         <a
                             href="#"
-                            className="flex items-center gap-2 text-lg font-bold text-gray-900 hover:text-indigo-600 transition-colors"
+                            className="flex items-center gap-2 text-lg font-bold text-stone-900 hover:text-amber-600 transition-colors"
                             onClick={(e) => {
                                 e.preventDefault();
                                 window.scrollTo({ top: 0, behavior: "smooth" });
                             }}
                         >
-                            <Code2 className="w-6 h-6 text-indigo-600" />
+                            <Code2 className="w-6 h-6 text-amber-600" />
                             <span>Kenty</span>
                         </a>
 
@@ -69,7 +69,7 @@ export function Header() {
                             ))}
                             <Button
                                 size="sm"
-                                className="ml-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full px-6"
+                                className="ml-4 bg-stone-900 hover:bg-stone-800 text-white rounded-full px-6"
                                 onClick={() => handleNavClick("#contact")}
                             >
                                 お問い合わせ
@@ -112,7 +112,7 @@ export function Header() {
                                 </button>
                             ))}
                             <Button
-                                className="mt-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full"
+                                className="mt-2 bg-stone-900 hover:bg-stone-800 text-white rounded-full"
                                 onClick={() => handleNavClick("#contact")}
                             >
                                 お問い合わせ

@@ -25,7 +25,7 @@ export function Footer() {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
                     >
-                        <Code2 className="w-5 h-5 text-indigo-600" />
+                        <Code2 className="w-5 h-5 text-amber-600" />
                         <span className="font-medium">Kenty</span>
                     </a>
 
